@@ -116,10 +116,20 @@ public class PriusTest {
     }
 
     @Test
-    @DisplayName("Prius is a Vehicle and is Rechargeable (polymorphism)")
+    @DisplayName("Prius is a Vehicle")
     void testPriusIsVehicleAndRechargeable() {
         assertInstanceOf(org.example.vehicle.Vehicle.class, prius, "A Prius should be a Vehicle");
+    }
+
+    @Test
+    @DisplayName("Prius is rechargeable")
+    void testPriusIsRechargeable() {
         assertInstanceOf(org.example.interfaces.Rechargeable.class, prius, "A Prius should be Rechargeable");
+    }
+
+    @Test
+    @DisplayName("Prius is refuelable")
+    void testPriusIsRefuelable() {
         assertInstanceOf(org.example.interfaces.Refuelable.class, prius, "A Prius should be Refuelable");
     }
 
